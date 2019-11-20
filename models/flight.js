@@ -27,16 +27,14 @@ var flightSchema = new Schema({
     },
 
     departs: {
-        type: Date, default: addYear()
+        type: Date
     },
 
     airport: {
-        type: String, enum: ['AUS', 'DAL', 'LAX', 'SAN' & 'SEA']
+        type: String, enum: ['AUS', 'DAL', 'LAX', 'SAN' , 'SEA']
     },
     
-    destinations: {
-        type: destinationSchema
-    }
+    destination: [destinationSchema]
 
-})
+});
 module.exports = mongoose.model('Flight', flightSchema)
