@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flights</title>
+    <link rel='stylesheet' href='/styleheets/style.css' />
 </head>
 <body>
         <h2>Flight List</h2>
@@ -15,12 +16,12 @@
           <th>Flight Number</th>
           <th>Departure</th>
        </thead>
-       <% flights.forEach(function(flight){ %>
+       <% flights.forEach(function(flight) { %>
           <tr>
               <td><%= flight.airport %></td>
               <td><%= flight.airline %></td>
               <td><%= flight.flightNo %></td>
-              <td><%= flight.departure %></td>
+              <td><%= flight.departs %></td>
               <td><a href="/flights/<%= flight._id %>"  id="details">DETAILS</a></td>
           </tr>
        <% }) %>
