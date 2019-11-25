@@ -15,7 +15,6 @@ var destinationSchema = new Schema({
 
 
 
-
 var flightSchema = new Schema({
 
     airline: {
